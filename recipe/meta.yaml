@@ -1,8 +1,8 @@
 {%set name = "flask-oauthlib" %}
 {%set camelName = "Flask-OAuthlib" %}
-{%set version = "0.9.3" %}
+{%set version = "0.9.4" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "ee60f7e996850c3544821ce9746079917e5b839d38ce4190a63482b0a902e791" %}
+{%set hash_val = "bcd6f2f4f58c764824a1de31b9beae22585c5191992d298c0be0b3118dfcbdc6" %}
 
 package:
   name: {{ name }}
@@ -25,8 +25,8 @@ requirements:
   run:
     - python
     - flask
-    - oauthlib >=0.6.2
-    - requests-oauthlib >=0.5.0
+    - oauthlib >=1.1.2
+    - requests-oauthlib >=0.6.2
 
 test:
   imports:
