@@ -1,8 +1,8 @@
 {% set name = "Flask-OAuthlib" %}
-{% set version = "0.9.4" %}
+{% set version = "0.9.5" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "bcd6f2f4f58c764824a1de31b9beae22585c5191992d298c0be0b3118dfcbdc6" %}
+{% set hash = "cbfe835902569909a19828582c3381148995ad677243016ccad9c951acf69406" %}
 {% set build = 0 %}
 
 package:
