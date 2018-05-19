@@ -14,9 +14,8 @@ Summary: OAuthlib for Flask
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/flask-oauthlib-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/flask-oauthlib-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/flask-oauthlib-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/flask-oauthlib-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/flask-oauthlib-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/flask-oauthlib-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/flask-oauthlib-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/flask-oauthlib-feedstock)
 
 Current release info
 ====================
