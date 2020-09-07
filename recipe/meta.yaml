@@ -1,8 +1,7 @@
 {% set name = "Flask-OAuthlib" %}
-{% set version = "0.9.5" %}
+{% set version = "0.9.6" %}
 {% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash = "cbfe835902569909a19828582c3381148995ad677243016ccad9c951acf69406" %}
+{% set hash = "5bb79c8a8e670c2eb4cb553dfc3283b6c8d1202f674934676dc173cee94fe39c" %}
 
 package:
   name: {{ name|lower }}
@@ -11,12 +10,12 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash }}
+  sha256: {{ hash }}
 
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -41,7 +40,7 @@ about:
   license_file: LICENSE
   license: BSD 3-Clause
   license_family: BSD
-  summary: 'OAuthlib for Flask'
+  summary: OAuthlib for Flask
   dev_url: https://github.com/lepture/flask-oauthlib
   doc_url: https://flask-oauthlib.readthedocs.io/en/latest/
 
