@@ -31,6 +31,7 @@ test:
     - flask_oauthlib
     - flask_oauthlib.contrib
     - flask_oauthlib.contrib.client
+    - flask_oauthlib.provider
   commands:
     - pip check
   requires: 
