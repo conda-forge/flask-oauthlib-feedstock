@@ -3,7 +3,7 @@ About flask-oauthlib
 
 Home: https://github.com/lepture/flask-oauthlib
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/flask-oauthlib-feedstock/blob/master/LICENSE.txt)
 
