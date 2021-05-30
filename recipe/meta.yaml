@@ -1,8 +1,8 @@
 {% set name = "Flask-OAuthlib" %}
-{% set version = "0.9.5" %}
+{% set version = "0.9.6" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "cbfe835902569909a19828582c3381148995ad677243016ccad9c951acf69406" %}
+{% set hash = "5bb79c8a8e670c2eb4cb553dfc3283b6c8d1202f674934676dc173cee94fe39c" %}
 
 package:
   name: {{ name|lower }}
@@ -15,7 +15,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
