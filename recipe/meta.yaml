@@ -1,33 +1,30 @@
 {% set name = "Flask-OAuthlib" %}
-{% set version = "0.9.5" %}
-{% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash = "cbfe835902569909a19828582c3381148995ad677243016ccad9c951acf69406" %}
+{% set version = "0.9.6" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ bundle }}
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 5bb79c8a8e670c2eb4cb553dfc3283b6c8d1202f674934676dc173cee94fe39c
 
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
-    - python
+  host:
+    - python >=3.6
     - pip
 
   run:
-    - python
+    - python >=3.6
     - flask
-    - oauthlib>=1.1.2,!=2.0.3,!=2.0.4,!=2.0.5,<3.0.0
-    - requests-oauthlib >=0.6.2
+    - oauthlib !=2.0.3,!=2.0.4,!=2.0.5,<3.0.0,>=1.1.2
+    - requests-oauthlib >=0.6.2,<1.2.0
+    - cachelib
 
 test:
   imports:
@@ -35,11 +32,15 @@ test:
     - flask_oauthlib.contrib
     - flask_oauthlib.contrib.client
     - flask_oauthlib.provider
+  commands:
+    - pip check
+  requires: 
+    - pip
 
 about:
   home: https://github.com/lepture/flask-oauthlib
   license_file: LICENSE
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   summary: 'OAuthlib for Flask'
   dev_url: https://github.com/lepture/flask-oauthlib
@@ -48,3 +49,4 @@ about:
 extra:
   recipe-maintainers:
     - pmlandwehr
+    - jan-janssen
