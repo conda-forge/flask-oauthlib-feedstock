@@ -1,22 +1,18 @@
 {% set name = "Flask-OAuthlib" %}
 {% set version = "0.9.6" %}
-{% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash = "5bb79c8a8e670c2eb4cb553dfc3283b6c8d1202f674934676dc173cee94fe39c" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ bundle }}
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 5bb79c8a8e670c2eb4cb553dfc3283b6c8d1202f674934676dc173cee94fe39c
 
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -35,6 +31,10 @@ test:
     - flask_oauthlib.contrib
     - flask_oauthlib.contrib.client
     - flask_oauthlib.provider
+  commands:
+    - pip check
+  requires: 
+    - pip
 
 about:
   home: https://github.com/lepture/flask-oauthlib
